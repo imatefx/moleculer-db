@@ -324,7 +324,7 @@ class SequelizeDbAdapter {
 			const searchConditions = fields.map(f => {
 				return {
 					[f]: {
-						[Op.like]: "%" + params.search + "%"
+						[Op.ilike]: "%" + params.search + "%"
 					}
 				};
 			});
